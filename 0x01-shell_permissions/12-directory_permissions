@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir my_dir chmod 755
+mkdir my_dir chmod +751
