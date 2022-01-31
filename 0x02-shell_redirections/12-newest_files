@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -printf | sort -nr | head -10
+ls -ltu -1 | head
