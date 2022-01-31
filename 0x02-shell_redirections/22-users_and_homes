@@ -1,2 +1,2 @@
 #!/bin/bash
-getent /etc/passwd
+ls -l | cut -d | sort -u
