@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -oE '^[/*/]$' /etc/passwd
+grep -oE ^[/*/] /etc/passwd
