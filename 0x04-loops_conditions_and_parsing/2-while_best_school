@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+n=0
+while [ $n -lt 10 ]
+do
+	echo "Best School"
+	((n++))
+done
