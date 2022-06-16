@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# FizzBuzz
 n=1
 while [ $n -lt 100 ]
 do
