@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Bash script that displays numbers from 1 to 20 and
 n=1
 while [ $n -lt 21 ]
 do
