@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+n=0
+while [ $n -lt 10 ]
+do
+	if [ $n == 9 ]
+	then
+		echo "Hi"
+	fi
+		echo "Best School"
+	((n++))
+done
