@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Bash script that displays
 trap "echo 'I am invincible!!!'" SIGTERM
 while true; do
       echo "To infinity and beyond"
