@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# Configure Nginx so that its HTTP response contains a custom header
+# Install and configure HAproxy on your lb-01 server.
 sudo apt-get update -y
 sudo apt-get install haproxy -y
 cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.copy
 echo "
-frontend http_web *:80
+frontend http_web
+    bind *:80
     mode http
     default_backend backend_ha
     
