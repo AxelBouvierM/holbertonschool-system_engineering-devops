@@ -11,4 +11,4 @@ print_result() {
     fi;
 }
 
-#print_result $1 $2
+print_result $1 $2
