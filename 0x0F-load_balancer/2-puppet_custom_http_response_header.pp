@@ -1,6 +1,6 @@
 # Advanced task 
 
-exec { 'update':
+exec { 'apt-get update':
   command  => 'apt-get update',
   provider => shell,
 }
@@ -10,7 +10,7 @@ package { 'nginx':
   require => Exec['apt-get update'],
 }
 
-file_line { 'header':
+file_line { 'Header response':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'server_name _;',
