@@ -4,11 +4,11 @@ print_result() {
     if [ "$#" -eq 1 ]; then
         for subdomain in "www" "lb-01" "web-01" "web-02"
         do
-            dig "$subdomain.$1"| grep -A1 'ANSWER SECTION:' | awk 'FNR==2{split($1,domain,"."); print "The subdomain " domain[1] " is a " $4 " records and points to " $5}'
+            dig "$subdomain.$1"| grep -A1 'ANSWER SECTION:' | awk 'FNR==2{split($1,domain,"."); print "The subdomain " domain[1] " is a " $4 " record and points to " $5}'
         done
     else
-        dig "$2.$1"| grep -A1 'ANSWER SECTION:' | awk 'FNR==2{split($1,domain,"."); print "The subdomain " domain[1] " is a " $4 " records and points to " $5}'
-    fi;
+        dig "$2.$1"| grep -A1 'ANSWER SECTION:' | awk 'FNR==2{split($1,domain,"."); print "The subdomain " domain[1] " is a " $4 " record and points to " $5}'
+    fi
 }
 
-print_result "$1" "$2"
+print_result $1 $2
