@@ -2,9 +2,9 @@
 """
 extend your Python script to export data in the CSV format
 """
+import csv
 import requests
 from sys import argv
-import csv
 
 if __name__ == "__main__":
     api = "https://jsonplaceholder.typicode.com/"
@@ -18,5 +18,5 @@ if __name__ == "__main__":
     with open(filename, 'w', newline='') as csvfile:
         write_file = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in todo:
-            write_file.writerow([argv[1], response.get("name"),
+            write_file.writerow([int(argv[1]), response.get("name"),
                                 task.get("completed"), task.get("title")])
