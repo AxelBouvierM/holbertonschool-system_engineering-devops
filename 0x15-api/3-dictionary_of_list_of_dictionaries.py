@@ -2,10 +2,9 @@
 """
 extend your Python script to export data in the JSON format
 """
-from curses.ascii import US
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
     api = "https://jsonplaceholder.typicode.com/"
@@ -24,7 +23,7 @@ if __name__ == "__main__":
         content[id] = []
         for task in todo:
             if task.get("userId") == id:
-                content[id].append({"username": user.get("name"),
+                content[id].append({"username": user.get("username"),
                                     "task": task.get("title"),
                                     "completed": task.get("completed")})
     content = json.dumps(content)
