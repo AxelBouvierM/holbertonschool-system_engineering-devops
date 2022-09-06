@@ -2,9 +2,9 @@
 """
 extend your Python script to export data in the JSON format
 """
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
     api = "https://jsonplaceholder.typicode.com/"
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     for task in todo:
         content[argv[1]].append({"task": task.get("title"),
                                 "completed": task.get("completed"),
-                                 "username": response.get("name")})
+                                 "username": response.get("username")})
     content = json.dumps(content)
     with open(filename, 'w', newline='') as jsonfile:
         jsonfile.write(content)
